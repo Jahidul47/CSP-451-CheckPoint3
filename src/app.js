@@ -14,7 +14,9 @@ app.get("/health", (req, res) => {
 });
 
 // one line, way over the 100-char printWidth
-app.get("/break", (req, res) => { res.json({ status: "healthy", uptime: process.uptime(), extra: "x".repeat(80) }); });
+app.get("/break", (req, res) => {
+  res.json({ status: "healthy", uptime: process.uptime(), extra: "x".repeat(80) });
+});
 
 module.exports = app;
 
